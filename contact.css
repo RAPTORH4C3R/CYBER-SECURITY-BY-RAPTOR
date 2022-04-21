@@ -1,0 +1,47 @@
+*{
+  margin: 0;
+padding: 0;
+font-family: 'Road Rage', cursive;
+}
+.header {
+min-height: 100vh;
+  width: 100%;
+background-image: url("security-3497068__480.webp");
+background-position: center; 
+  background-size: cover;
+}
+.text-box{
+      width: 90%;
+      color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      text: center;
+}
+.text-box h1{
+        font-size: 62px;
+        color: #fff;
+       
+ 
+}
+.text-box p{
+         margin: 10px 0 40px;
+         font-size: 30px;
+         color: #fff;
+}
+.hero-btn{
+      display: inline-block;
+      text-decoration: none;
+      color: #fff;
+      border: 1px solid #fff;
+      padding: 12px 32px;
+      background: transparent;
+      position: relative;
+      cursor: pointer;
+}
+.hero-btn:hover{
+      border: 1px solid #DC143C;
+      background: #DC143C;
+  transition: 1s;
+  }
