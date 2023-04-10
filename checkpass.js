@@ -7,7 +7,7 @@ form.addEventListener('submit', function(event) {
 	var username = document.querySelector('#username').value;
 	var password = document.querySelector('#password').value;
 
-	if (username === 'anju123' && password === 'raptor000') {
+	if (username === 'raptor123' && password === 'raptor000') {
 		error.innerHTML = '';
 		window.location.href = 'dashboard.html'; // Redirect to dashboard page
 	} else {
