@@ -1,50 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <meta charset="UTF-8">
-     <title>Page title</title>
-     <style>
-      .button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 20px;
-  margin-top: 30px;
-  transition: background-color 0.3s ease;
-}
- </style>
- 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Audio Playlist</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .playlist {
+            max-width: 600px;
+            width: 100%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        audio {
+            width: 100%;
+            margin-bottom: 10px;
+            background-color: #f2f2f2;
+            padding: 10px;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        audio:focus {
+            box-shadow: 0 0 5px #007bff;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        p {
+            text-align: center;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .playlist {
+                padding: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
-     <h1>sorry this page updating for a new section building </h1>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-</div>
+    <div class="playlist">
+        <h1>My Audio Playlist</h1>
+        <audio controls>
+            <source src="audio1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
 
-      <a href="index.html" class="button">Back to Home</a>
+        <audio controls>
+            <source src="audio2.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <p>Enjoy listening to my curated playlist!</p>
     </div>
 </body>
 </html>
