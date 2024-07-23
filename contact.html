@@ -23,6 +23,11 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .song {
+            margin-bottom: 10px;
         }
 
         audio {
@@ -39,12 +44,10 @@
         }
 
         h1 {
-            text-align: center;
             color: #333;
         }
 
         p {
-            text-align: center;
             color: #666;
         }
 
@@ -58,43 +61,82 @@
 <body>
     <div class="playlist">
         <h1>My Audio Playlist</h1>
-        
-        <audio controls>
-            <source src="The_Life_of_Ram_Video_So.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
 
-        <audio controls>
-            <source src="Thaabangale.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
+        <div class="song">
+            <p>The_Life_of_Ram_Video_So.mp3</p>
+            <audio id="audio1" controls>
+                <source src="The_Life_of_Ram_Video_So.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
 
-        <audio controls>
-            <source src="SaptaSagaradaache.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
+        <div class="song">
+            <p>Thaabangale.mp3</p>
+            <audio id="audio2" controls>
+                <source src="Thaabangale.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
 
-        <audio controls>
-            <source src="NenjinEzhuth.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
+        <div class="song">
+            <p>SaptaSagaradaache.mp3</p>
+            <audio id="audio3" controls>
+                <source src="SaptaSagaradaache.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
 
-        <audio controls>
-            <source src="Kaathalae-Kaathalae.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
+        <div class="song">
+            <p>NenjinEzhuth.mp3</p>
+            <audio id="audio4" controls>
+                <source src="NenjinEzhuth.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
 
-        <audio controls>
-            <source src="IravinguTheevai.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
+        <div class="song">
+            <p>Kaathalae-Kaathalae.mp3</p>
+            <audio id="audio5" controls>
+                <source src="Kaathalae-Kaathalae.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
 
-        <audio controls>
-            <source src="Anthaathi.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
+        <div class="song">
+            <p>IravinguTheevai.mp3</p>
+            <audio id="audio6" controls>
+                <source src="IravinguTheevai.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <div class="song">
+            <p>Anthaathi.mp3</p>
+            <audio id="audio7" controls>
+                <source src="Anthaathi.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
 
         <p>Enjoy listening to these songs!</p>
     </div>
+
+    <script>
+        // JavaScript to handle manual playback control
+
+        // Get all audio elements
+        const audioElements = document.querySelectorAll('audio');
+
+        // Add event listener to each audio element to pause others when one is played
+        audioElements.forEach(audio => {
+            audio.addEventListener('play', () => {
+                audioElements.forEach(otherAudio => {
+                    if (otherAudio !== audio) {
+                        otherAudio.pause();
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
